@@ -6,7 +6,7 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami           = "ami-0eb5f3f64b10d3e0e"
   instance_type = "t2.micro"
-  security_groups = ["${aws_security_group.ubuntu_allow_http_ssh}"]
+  security_groups = ["${aws_security_group.ubuntu_allow_http_ssh.name}"]
   tags = {
     Name = "terra"
   }
