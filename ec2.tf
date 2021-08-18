@@ -12,26 +12,26 @@ resource "aws_instance" "example" {
   }
 }
 resource "aws_security_group" "ubuntu_allow_http_ssh" {
-  name = "ubuntu_allow_http_ssh"
-  description = "Allow HTTP and SSH inbound traffic"
-  ingress {
-    from_port = 80
-    protocol = "tcp"
-    to_port = 80
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  ingress {
-    from_port = 22
-    protocol = "tcp"
-    to_port = 22
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  egress {
-    from_port = 0
-    protocol = "-1"
-    to_port = 0
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+  name = "launch-wizard-3"
+  description = "launch-wizard-3 created 2021-04-12T12:13:23.019+05:30"
+  #ingress {
+  #  from_port = 80
+  #  protocol = "tcp"
+  #  to_port = 80
+  #  cidr_blocks = ["0.0.0.0/0"]
+  #}
+  #ingress {
+  #  from_port = 22
+  #  protocol = "tcp"
+  #  to_port = 22
+  #  cidr_blocks = ["0.0.0.0/0"]
+  #}
+  #egress {
+  #  from_port = 0
+  #  protocol = "-1"
+  #  to_port = 0
+  #  cidr_blocks = ["0.0.0.0/0"]
+  #}
 }
 output "ip" {
   value = "${aws_instance.example.public_ip}"
