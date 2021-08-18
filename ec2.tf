@@ -6,12 +6,12 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami           = "ami-0eb5f3f64b10d3e0e"
   instance_type = "t2.micro"
-  security_groups = ["${aws_security_group.ubuntu_allow_http_ssh.name}"]
+  security_groups = ["${aws_security_group.launch-wizard-3.name}"]
   tags = {
     Name = "terra"
   }
 }
-resource "aws_security_group" "ubuntu_allow_http_ssh" {
+resource "aws_security_group" "launch-wizard-3" {
   name = "launch-wizard-3"
   description = "launch-wizard-3 created 2021-04-12T12:13:23.019+05:30"
   #ingress {
