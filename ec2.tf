@@ -6,14 +6,14 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami           = "ami-0eb5f3f64b10d3e0e"
   instance_type = "t2.micro"
-  security_groups = ["${aws_security_group.launch-wizard-3.name}"]
+  security_groups = ["${launch-wizard-3}"]
   tags = {
     Name = "terra"
   }
 }
-resource "aws_security_group" "launch-wizard-3" {
-  name = "launch-wizard-3"
-  description = "launch-wizard-3 created 2021-04-12T12:13:23.019+05:30"
+#resource "aws_security_group" "launch-wizard-3" {
+#  name = "launch-wizard-3"
+#  description = "launch-wizard-3 created 2021-04-12T12:13:23.019+05:30"
   #ingress {
   #  from_port = 80
   #  protocol = "tcp"
@@ -32,7 +32,7 @@ resource "aws_security_group" "launch-wizard-3" {
   #  to_port = 0
   #  cidr_blocks = ["0.0.0.0/0"]
   #}
-}
+#}
 output "ip" {
   value = "${aws_instance.example.public_ip}"
 }
