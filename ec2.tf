@@ -4,7 +4,7 @@ provider "aws" {
   region     = "us-east-1"
 }
 resource "aws_instance" "example" {
-  ami           = "ami-0eb5f3f64b10d3e0e"
+  ami           = "0eb5f3f64b10d3e0e"
   instance_type = "t2.micro"
   security_groups = ["${aws_security_group.ubuntu_allow_http_ssh.id}"]
   tags = {
