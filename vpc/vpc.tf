@@ -17,7 +17,8 @@ terraform {
 }
 
 provider "aws" {
-  region     = "us-east-1"
+  profile = "default"
+  region  = "us-east-1"
 }
 
 resource "aws_vpc" "vpc" {
