@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "${var.s3-bucket}"
+    bucket = "shashank-zelar"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
