@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = aws_s3_bucket.onebucket.id
+    bucket = "shashank-zelar"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
