@@ -11,17 +11,17 @@ provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
 }
 
-resource "aws_s3_bucket" "onebucket" {
-  bucket = "${var.s3-bucket}"
-  acl = "${var.acl-value}"
-  versioning {
-    enabled = true
-  }
-  tags = {
-    Name = "Bucket1"
-    Environment = "Test"
-  }
-}
+//resource "aws_s3_bucket" "onebucket" {
+//  bucket = "${var.s3-bucket}"
+//  acl = "${var.acl-value}"
+//  versioning {
+//    enabled = true
+//  }
+//  tags = {
+//    Name = "Bucket1"
+//    Environment = "Test"
+//  }
+//}
 
 resource "aws_vpc" "vpc" {
   cidr_block              = "${var.vpc-cidr}"
