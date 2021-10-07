@@ -39,3 +39,9 @@ variable "private-subnet-3-cidr" {
   description   = "Private Subnet 3 CIDR Block"
   type          = string
 }
+variable "s3-bucket" {
+  default = "shashank-zelar"
+}
+variable "acl-value" {
+  default = "public"
+}

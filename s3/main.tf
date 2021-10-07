@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "shashank-zelar"
+    bucket = "${var.s3-bucket}"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
@@ -12,8 +12,8 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "onebucket" {
-  bucket = "shashank-zelar"
-  acl = "public"
+  bucket = "${var.s3-bucket}"
+  acl = "${var.acl-value}"
   versioning {
     enabled = true
   }
