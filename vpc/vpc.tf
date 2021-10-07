@@ -1,9 +1,9 @@
 terraform {
   backend "remote" {
-    organization = "naveen5035"
+    organization = "Shashank-zelar"
 
     workspaces {
-      name = "sample"
+      name = "vpc1"
     }
   }
   required_providers {
@@ -25,7 +25,7 @@ resource "aws_vpc" "vpc" {
   instance_tenancy        = "default"
 
   tags      = {
-    Name    = "Sample"
+    Name    = "Sample-vpc"
   }
 }
 
@@ -33,7 +33,7 @@ resource "aws_internet_gateway" "internet-gateway" {
   vpc_id    = aws_vpc.vpc.id
 
   tags      = {
-    Name    = "Sample"
+    Name    = "Sample-vpc"
   }
 }
 
