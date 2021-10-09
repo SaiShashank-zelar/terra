@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     google = {
-      source = "hashicorp/google"
+      source  = "hashicorp/google"
       version = "3.5.0"
     }
   }
@@ -18,10 +18,11 @@ provider "google" {
 resource "google_compute_instance" "vpc_network" {
   name         = "terraform"
   machine_type = "f1-micro"
+  tags         = ["web", "dev"]
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = "cos-cloud/cos-stable"
     }
   }
   network_interface {
